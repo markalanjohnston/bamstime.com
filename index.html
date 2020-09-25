@@ -272,8 +272,8 @@ function bellSchedule() {
           plusNextMessage = sched[nii].msg;
           document.getElementById("plus-next-message").innerHTML = "Then...<br />" + plusNextMessage;
       }
-    var countDown = (Math.trunc(sched[ni].t/100) * 60 + sched[ni].t % 100) - (Math.trunc(currentTimeIndex/100) * 60 + currentTimeIndex % 100);
-    var countDownSeconds = 59 - d.getSeconds();
+    let countDown = (Math.trunc(sched[ni].t/100) * 60 + sched[ni].t % 100) - (Math.trunc(currentTimeIndex/100) * 60 + currentTimeIndex % 100);
+    let countDownSeconds = 59 - d.getSeconds();
     }
   }
 
@@ -329,7 +329,7 @@ function bellSchedule() {
     </div>
 
 
-    
+
 
 </div>
 </body>
