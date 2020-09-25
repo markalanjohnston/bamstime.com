@@ -1,0 +1,334 @@
+<html>
+<head>
+<script data-ad-client="ca-pub-3941169790588723" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<title>BAMS Time</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175493352-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175493352-1');
+</script>
+
+<style>
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  background-color: #003;
+  color: white;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#wrapper{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+#header{
+  background-color: gray;
+  color: darkred;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+p.title{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 60px;
+}
+
+.titleImg {
+  height: 50px;
+  margin: 20px 20px 0 20px;
+}
+
+p.center{
+  text-align: center;
+}
+
+#content{
+  margin: 0;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+#clock{
+  background-color: #0044aa;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+#schedTitle{
+  background-color: #0044aa;
+  text-align: center;
+  font-variant: normal;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#studentMessage{
+  background-color: #000;
+  color: red;
+  text-align: center;
+  font-variant: normal;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+#message {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: #0044aa;
+  text-align: center;
+  font-size: 55px;
+  border: solid;
+}
+
+#next-message, #plus-next-message {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: #0044aa;
+  text-align: center;
+  font-size: 30px;
+  border: solid;
+}
+
+#schedulebox {
+  width: 80%;
+  float: left;
+  text-align: center;
+  margin: 0 0 1% 10%;
+  padding: 0;
+}
+
+#countdown {
+  font-size: 60px;
+  color: green;
+}
+
+
+</style>
+
+<script>
+function init(){
+  bellSchedule();
+
+}
+
+function bellSchedule() {
+  let d = new Date();
+  let currentDayOfWeek = d.getDay();
+  let currentYear = d.getYear() - 100;
+  let currentMonth = d.getMonth() + 1;
+  let todaysDate = currentMonth.toString() + d.getDate().toString() + currentYear.toString();
+
+  let currentTimeIndex = d.getHours() + "" + (d.getMinutes()<10?'0':'') + d.getMinutes();
+  let currentMessage = "";
+  let nextMessage = "";
+  let plusNextMessage = "";
+  let sched = [];
+  let schedTitle = "";
+
+  if (todaysDate == "92920"){
+    schedTitle = "This is schedule will update for the Parent Night bell schedule after 4pm.";
+    sched = [
+      { t: 0, msg: "8:15<br />	First Bell" },
+      { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
+      { t: 830, msg: "1st Period    <br />	 8:30 -  9:15" },
+      { t: 915, msg: "Transition    <br />	 9:15 -  9:18" },
+      { t: 918, msg: "2nd Period    <br />   9:18 - 10:03" },
+      { t: 1003, msg: "Transition   <br />  10:03 - 10:06" },
+      { t: 1006, msg: "3rd Period   <br />  10:06 - 10:51" },
+      { t: 1051, msg: "Transition   <br />  10:51 - 10:54" },
+      { t: 1054, msg: "4th Period   <br />  10:54 - 11:39" },
+      { t: 1139, msg: "Transition   <br />  11:39 - 11:42" },
+      { t: 1142, msg: "LUNCH        <br />  11:42 - 12:14" },
+      { t: 1214, msg: "Transition   <br />  12:14 - 12:17" },
+      { t: 1217, msg: "Advisory     <br />  12:17 - 12:49" },
+      { t: 1249, msg: "Transition   <br />  12:49 - 12:52" },
+      { t: 1252, msg: "7th Period   <br />  12:52 -  1:37" },
+      { t: 1337, msg: "Transition   <br />   1:37 -  1:40" },
+      { t: 1340, msg: "8th Period   <br />   1:40 -  2:25" },
+      { t: 1425, msg: "Transition   <br />   2:25 -  2:28" },
+      { t: 1428, msg: "9th Period   <br />   2:28 -  3:13" },
+      { t: 1513, msg: "Transition   <br />   3:13 -  3:16" },
+      { t: 1516, msg: "10th Period  <br />   3:16 -  4:00" },
+      { t: 1600, msg: "Teachers Break for Dinner <br />Parent night starts at 5pm" },
+      { t: 1700, msg: "Parrent Night<br /> 1st Period - 5:00 -  5:23" },
+      { t: 1723, msg: "Parrent Night<br /> Transition - 5:23 -  5:27" },
+      { t: 1727, msg: "Parrent Night<br /> 2nd Period - 5:27 -  5:40" },
+      { t: 1740, msg: "Parrent Night<br /> Transition - 5:40 -  5:44" },
+      { t: 1744, msg: "Parrent Night<br /> 3rd Period - 5:44 -  5:57" },
+      { t: 1757, msg: "Parrent Night<br /> Transition - 5:57 -  6:01" },
+      { t: 1801, msg: "Parrent Night<br /> 4th Period - 6:01 -  6:14" },
+      { t: 1814, msg: "Parrent Night<br /> Transition - 6:14 -  6:18" },
+      { t: 1818, msg: "Parrent Night<br /> Advisory - 5th Period - 6:18 -  6:48" },
+      { t: 1848, msg: "Parrent Night<br /> Transition - 6:48 -  6:52" },
+      { t: 1852, msg: "Parrent Night<br /> 7th Period - 6:52 -  7:05" },
+      { t: 1905, msg: "Parrent Night<br /> Transition - 7:05 -  7:09" },
+      { t: 1909, msg: "Parrent Night<br /> 8th Period - 7:09 -  7:22" },
+      { t: 1922, msg: "Parrent Night<br /> Transition - 7:22 -  7:26" },
+      { t: 1926, msg: "Parrent Night<br /> 9th Period - 7:26 -  7:39" },
+      { t: 1939, msg: "Parrent Night<br /> Transition - 7:39 -  7:43" },
+      { t: 1943, msg: "Parrent Night<br /> 10th Period - 7:43 -  7:56" },
+      { t: 1956, msg: "End of Parrent Night" },
+      { t: 2400, msg: "clock will reset"},
+    ];
+  }
+  else if (currentDayOfWeek == 5){
+    schedTitle = "This is Friday's bell schedule.";
+    sched = [
+      { t: 0, msg: "Friday: Teacher Office Hours 8:00-8:30am" },
+      { t: 800, msg: "Teacher Office Hours               <br />   8:00 -  8:30" },
+      { t: 830, msg: "Teacher Professional Development      <br />	 8:30 -  9:20" },
+      { t: 920, msg: "Live Student Check In (Attendance)    <br />	 9:20 - 10:00" },
+      { t: 1000, msg: "Teacher SLC Planning Time            <br />  10:00 - 11:30" },
+      { t: 1130, msg: "Teacher Lunch Time                   <br />  11:30 - 12:20" },
+      { t: 1220, msg: "Teacher Conference Time              <br />  12:20 -  1:05" },
+      { t: 1305, msg: "Teacher PLC Planning Time            <br />   1:05 -  3:15" },
+      { t: 1515, msg: "Attendance for Friday Assignments Due<br />   3:15 -  4:01" },
+      { t: 1601, msg: "School is out!" },
+      { t: 2400, msg: "clock will reset"},
+    ];
+    let sl = sched.length;
+  }
+  else if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
+    schedTitle = "It's the WEEKEND! Enjoy!";
+    sched = [
+      { t: 0, msg: "School is out!" },
+      { t: 1, msg: "School is out!" },
+      { t: 2359, msg: "School is out!"},
+    ];
+    let sl = sched.length;
+  }
+  else {
+    schedTitle = "This is the REGULAR bell schedule for M-Th.";
+    sched = [
+      { t: 0, msg: "8:15<br />	First Bell" },
+      { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
+      { t: 830, msg: "1st Period    <br />	 8:30 -  9:15" },
+      { t: 915, msg: "Transition    <br />	 9:15 -  9:18" },
+      { t: 918, msg: "2nd Period    <br />   9:18 - 10:03" },
+      { t: 1003, msg: "Transition   <br />  10:03 - 10:06" },
+      { t: 1006, msg: "3rd Period   <br />  10:06 - 10:51" },
+      { t: 1051, msg: "Transition   <br />  10:51 - 10:54" },
+      { t: 1054, msg: "4th Period   <br />  10:54 - 11:39" },
+      { t: 1139, msg: "Transition   <br />  11:39 - 11:42" },
+      { t: 1142, msg: "LUNCH        <br />  11:42 - 12:14" },
+      { t: 1214, msg: "Transition   <br />  12:14 - 12:17" },
+      { t: 1217, msg: "Advisory     <br />  12:17 - 12:49" },
+      { t: 1249, msg: "Transition   <br />  12:49 - 12:52" },
+      { t: 1252, msg: "7th Period   <br />  12:52 -  1:37" },
+      { t: 1337, msg: "Transition   <br />   1:37 -  1:40" },
+      { t: 1340, msg: "8th Period   <br />   1:40 -  2:25" },
+      { t: 1425, msg: "Transition   <br />   2:25 -  2:28" },
+      { t: 1428, msg: "9th Period   <br />   2:28 -  3:13" },
+      { t: 1513, msg: "Transition   <br />   3:13 -  3:16" },
+      { t: 1516, msg: "10th Period  <br />   3:16 -  4:01" },
+      { t: 1601, msg: "School is out!" },
+      { t: 2400, msg: "clock will reset"},
+    ];
+  }
+
+  document.getElementById("schedTitle").innerHTML = schedTitle;
+
+  let sl = sched.length;
+  for (let i = 0; i < sl; i++) {
+    if (currentTimeIndex >= sched[i].t) {
+      currentMessage = sched[i].msg;
+      document.getElementById("message").innerHTML = currentMessage;
+      nextMessage = "";
+      plusNextMessage = "";
+
+      let ni = i+1; let nii = i+2;
+      if (ni < sl && nii < sl) {
+          nextMessage = sched[ni].msg;
+          document.getElementById("next-message").innerHTML = "Next Up...<br />" + nextMessage;
+          plusNextMessage = sched[nii].msg;
+          document.getElementById("plus-next-message").innerHTML = "Then...<br />" + plusNextMessage;
+      }
+    var countDown = (Math.trunc(sched[ni].t/100) * 60 + sched[ni].t % 100) - (Math.trunc(currentTimeIndex/100) * 60 + currentTimeIndex % 100);
+    var countDownSeconds = 59 - d.getSeconds();
+    }
+  }
+
+  if(countDown < 5){
+    countDown = countDown - 1;
+    document.getElementById("countdown").innerHTML = "<span style='color:red'>" + countDown + ":" + (countDownSeconds<10?'0':'') + countDownSeconds;
+  }
+  else {
+    document.getElementById("countdown").innerHTML =  "<span style='color:#0044aa'>Minutes Remaining: </style>" + countDown;
+  }
+
+  document.getElementById("clock").innerHTML = d;
+
+  setTimeout(function () { bellSchedule() }, 1000);
+}
+
+
+</script>
+</head>
+
+<body onload="init()">
+  <noscript>
+    You will need JavaScript to use this site.
+  </noscript>
+
+<div id="wrapper">
+
+  <div id="header">
+    <p class="title">
+      <img src="logo.png" class="titleImg"/>
+      BAMS <span style="color:darkred;">Time</span>
+      <img src="logo.png" class="titleImg" />
+    </p>
+  </div>
+
+  <div id="content">
+
+    <p id="clock"></p>
+    <p id="schedTitle"></p>
+
+    <div id="schedulebox">
+      <h1>
+      <p id="message"></p>
+      <p id="countdown"></p>
+      <br />
+      <p id="next-message"></p>
+      <br />
+      <p id="plus-next-message"></p>
+      <p><br /></p>
+      <p id="studentMessage">Messages:<br /><br /></p>
+      <p id="studentMessage">- <a href="https://youtu.be/iZiB-pNiGMg" target="_blank">What is bamstime and where did it come from??? Click Here</a><br /><br /></p>
+      <p id="studentMessage">- Students, you can access your schedule and grades online - <a href="https://hac.yisd.net/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess" target="_blank">HERE</a><br /><br /><p>
+    </div>
+
+
+</div>
+</body>
+</html>
