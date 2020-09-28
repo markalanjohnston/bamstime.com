@@ -151,7 +151,7 @@ function bellSchedule() {
           document.getElementById("plus-next-message").innerHTML = "Then...<br />" + plusNextMessage;
       }
     var countDown = (Math.trunc(sched[ni].t/100) * 60 + sched[ni].t % 100) - (Math.trunc(currentTimeIndex/100) * 60 + currentTimeIndex % 100);
-    let countDownSeconds = 59 - d.getSeconds();
+    var countDownSeconds = 59 - d.getSeconds();
     }
   }
 
