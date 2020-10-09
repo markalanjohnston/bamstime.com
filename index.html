@@ -32,49 +32,16 @@ function bellSchedule() {
   let sched = [];
   let schedTitle = "";
 
-  if (todaysDate == "92920"){
-    schedTitle = "This is schedule will update for the Parent Night bell schedule after 4pm.";
+  if (todaysDate == "101220" || todaysDate == "101320" || todaysDate == "101420"){
+    schedTitle = "This schedule is for intersession.";
     sched = [
-      { t: 0, msg: "8:15<br />	First Bell" },
-      { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
-      { t: 830, msg: "1st Period    <br />	 8:30 -  9:15" },
-      { t: 915, msg: "Transition    <br />	 9:15 -  9:18" },
-      { t: 918, msg: "2nd Period    <br />   9:18 - 10:03" },
-      { t: 1003, msg: "Transition   <br />  10:03 - 10:06" },
-      { t: 1006, msg: "3rd Period   <br />  10:06 - 10:51" },
-      { t: 1051, msg: "Transition   <br />  10:51 - 10:54" },
-      { t: 1054, msg: "4th Period   <br />  10:54 - 11:39" },
-      { t: 1139, msg: "Transition   <br />  11:39 - 11:42" },
-      { t: 1142, msg: "LUNCH        <br />  11:42 - 12:14" },
-      { t: 1214, msg: "Transition   <br />  12:14 - 12:17" },
-      { t: 1217, msg: "Advisory     <br />  12:17 - 12:49" },
-      { t: 1249, msg: "Transition   <br />  12:49 - 12:52" },
-      { t: 1252, msg: "7th Period   <br />  12:52 -  1:37" },
-      { t: 1337, msg: "Transition   <br />   1:37 -  1:40" },
-      { t: 1340, msg: "8th Period   <br />   1:40 -  2:25" },
-      { t: 1425, msg: "Transition   <br />   2:25 -  2:28" },
-      { t: 1428, msg: "9th Period   <br />   2:28 -  3:13" },
-      { t: 1513, msg: "Transition   <br />   3:13 -  3:16" },
-      { t: 1516, msg: "10th Period  <br />   3:16 -  4:00" },
-      { t: 1600, msg: "Teachers Break for Dinner <br />Parent night starts at 5pm" },
-      { t: 1700, msg: "Parent Night<br /> 1st Period - 5:00 -  5:23" },
-      { t: 1723, msg: "Parent Night<br /> Transition - 5:23 -  5:27" },
-      { t: 1727, msg: "Parent Night<br /> 2nd Period - 5:27 -  5:40" },
-      { t: 1740, msg: "Parent Night<br /> Transition - 5:40 -  5:44" },
-      { t: 1744, msg: "Parent Night<br /> 3rd Period - 5:44 -  5:57" },
-      { t: 1757, msg: "Parent Night<br /> Transition - 5:57 -  6:01" },
-      { t: 1801, msg: "Parent Night<br /> 4th Period - 6:01 -  6:14" },
-      { t: 1814, msg: "Parent Night<br /> Transition - 6:14 -  6:18" },
-      { t: 1818, msg: "Parent Night<br /> Advisory - 5th Period - 6:18 -  6:48" },
-      { t: 1848, msg: "Parent Night<br /> Transition - 6:48 -  6:52" },
-      { t: 1852, msg: "Parent Night<br /> 7th Period - 6:52 -  7:05" },
-      { t: 1905, msg: "Parent Night<br /> Transition - 7:05 -  7:09" },
-      { t: 1909, msg: "Parent Night<br /> 8th Period - 7:09 -  7:22" },
-      { t: 1922, msg: "Parent Night<br /> Transition - 7:22 -  7:26" },
-      { t: 1926, msg: "Parent Night<br /> 9th Period - 7:26 -  7:39" },
-      { t: 1939, msg: "Parent Night<br /> Transition - 7:39 -  7:43" },
-      { t: 1943, msg: "Parent Night<br /> 10th Period - 7:43 -  7:56" },
-      { t: 1956, msg: "End of Parent Night" },
+      { t: 0, msg: "8:15<br />Intersession Homeroom" },
+      { t: 800, msg: "Intersession Homeroom <br />   8:00 -  9:00" },
+      { t: 900, msg: "1st Rotation          <br />	 9:00 -  9:45" },
+      { t: 945, msg: "2nd Rotation          <br />	 9:45 -  10:30" },
+      { t: 1030, msg: "3rd Rotation          <br />   10:30 - 11:15" },
+      { t: 1115, msg: "Intersession Homeroom<br />   11:15 - 12:00" },
+      { t: 1200, msg: "School is out!" },
       { t: 2400, msg: "clock will reset"},
     ];
   }
