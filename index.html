@@ -32,17 +32,12 @@ function bellSchedule() {
   let sched = [];
   let schedTitle = "";
 
-  if (todaysDate == "101220" || todaysDate == "101320" || todaysDate == "101420"){
-    schedTitle = "This schedule is for intersession.";
+  if (todaysDate == "101920" || todaysDate == "102020" || todaysDate == "102120" || todaysDate == "102220" || todaysDate == "102320"){
+    schedTitle = "It is currently October Intersession.";
     sched = [
-      { t: 0, msg: "8:15<br />Intersession Homeroom" },
-      { t: 800, msg: "Intersession Homeroom <br />   8:00 -  9:00" },
-      { t: 900, msg: "1st Rotation          <br />	 9:00 -  9:45" },
-      { t: 945, msg: "2nd Rotation          <br />	 9:45 -  10:30" },
-      { t: 1030, msg: "3rd Rotation          <br />   10:30 - 11:15" },
-      { t: 1115, msg: "Intersession Homeroom<br />   11:15 - 12:00" },
-      { t: 1200, msg: "School is out!" },
-      { t: 2400, msg: "clock will reset"},
+      { t: 0, msg: "School is out for Intersession" },
+      { t: 1, msg: "School is out for Intersession" },
+      { t: 2359, msg: "School is out for Intersession" },
     ];
   }
   else if (currentDayOfWeek == 5){
