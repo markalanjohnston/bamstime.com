@@ -32,27 +32,24 @@ function bellSchedule() {
   let sched = [];
   let schedTitle = "";
 
-  if (todaysDate == "101920" || todaysDate == "102020" || todaysDate == "102120" || todaysDate == "102220" || todaysDate == "102320"){
-    schedTitle = "It is currently October Intersession.";
-    sched = [
-      { t: 0, msg: "School is out for Intersession" },
-      { t: 1, msg: "School is out for Intersession" },
-      { t: 2359, msg: "School is out for Intersession" },
-    ];
-  }
-  else if (currentDayOfWeek == 5){
+if (currentDayOfWeek == 5){
     schedTitle = "This is Friday's bell schedule.";
     sched = [
-      { t: 0, msg: "Friday: Teacher Office Hours 8:00-8:30am" },
-      { t: 800, msg: "Teacher Office Hours               <br />   8:00 -  8:30" },
-      { t: 830, msg: "Teacher Professional Development      <br />	 8:30 -  9:20" },
-      { t: 920, msg: "Live Student Check In (Attendance)    <br />	 9:20 - 10:00" },
-      { t: 1000, msg: "Teacher SLC Planning Time            <br />  10:00 - 11:30" },
-      { t: 1130, msg: "Teacher Lunch Time                   <br />  11:30 - 12:20" },
-      { t: 1220, msg: "Teacher Conference Time              <br />  12:20 -  1:05" },
-      { t: 1305, msg: "Teacher PLC Planning Time            <br />   1:05 -  3:15" },
-      { t: 1515, msg: "Attendance for Friday Assignments Due<br />   3:15 -  4:01" },
-      { t: 1601, msg: "School is out!" },
+      { t: 0, msg: "Friday Schedule" },
+      { t: 800, msg: "Faculty Meeting           <br />   8:00 -  8:30" },
+      { t: 830, msg: "1st/7th Period            <br />	 8:30 -  9:15" },
+      { t: 915, msg: "Transition                <br />	 9:15 -  9:18" },
+      { t: 918, msg: "2nd/8th Period            <br />   9:18 - 10:03" },
+      { t: 1003, msg: "Transition               <br />  10:03 - 10:06" },
+      { t: 1006, msg: "3rd/9th Period           <br />  10:06 - 10:51" },
+      { t: 1051, msg: "Transition               <br />  10:51 - 10:54" },
+      { t: 1054, msg: "4th/10th Period          <br />  10:54 - 11:39" },
+      { t: 1139, msg: "Transition               <br />  11:39 - 11:42" },
+      { t: 1142, msg: "Advisory                 <br />  11:42 - 12:15" },
+      { t: 1215, msg: "Lunch                    <br />  12:15 - 12:45" },
+      { t: 1245, msg: "Teacher's Conference     <br />  12:45 -  1:30" },
+      { t: 1330, msg: "Teacher's PLC Period     <br />   1:30 -  4:00" },
+      { t: 1600, msg: "School is out!" },
       { t: 2400, msg: "clock will reset"},
     ];
     let sl = sched.length;
