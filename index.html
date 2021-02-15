@@ -45,6 +45,29 @@ if (todaysDate == 11521 || todaysDate == 12921 || todaysDate == 21221 || todaysD
       ];
       let sl = sched.length;
     }
+    if (todaysDate == 21521 || todaysDate == 21621){
+          schedTitle = "Spring Interim Testing schedule.";
+          sched = [
+            { t: 0, msg: "Testing schedule" },
+            { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
+            { t: 830, msg: "Students Report to 1st Period<br />8:30 -  8:35" },
+            { t: 835, msg: "Go to Advisory<br />Testing is scheduled to start at 8:45" },
+            { t: 845, msg: "Testing in Advisory<br /> Follow Teacher's Instructions" },
+            { t: 1215, msg: "7th Grade Lunch<br />8th Grade Advisory<br />  12:15 - 12:45" },
+            { t: 1245, msg: "7th Grade Advisory<br />8th Grade Lunch<br />  12:45 - 1:15" },
+            { t: 1315, msg: "Transition" },
+            { t: 1318, msg: "Monday 1st Period<br />Tuesday 7th Period<br /> 1:18 - 1:55" },
+            { t: 1355, msg: "Transition" },
+            { t: 1358, msg: "Monday 2nd Period<br />Tuesday 8th Period<br /> 1:58 - 2:35" },
+            { t: 1435, msg: "Transition" },
+            { t: 1438, msg: "Monday 3rd Period<br />Tuesday 9th Period<br /> 2:38 - 3:15" },
+            { t: 1515, msg: "Transition" },
+            { t: 1518, msg: "Monday 4th Period<br />Tuesday 10th Period<br /> 3:18 - 4:00" },
+            { t: 1600, msg: "School is out!" },
+            { t: 2400, msg: "clock will reset"},
+          ];
+          let sl = sched.length;
+        }
   else if (currentDayOfWeek == 5){
           schedTitle = "This is Friday's 'B' bell schedule.";
           sched = [
@@ -59,7 +82,7 @@ if (todaysDate == 11521 || todaysDate == 12921 || todaysDate == 21221 || todaysD
             { t: 1054, msg: "10th Period   <br />  10:54 - 11:39" },
             { t: 1139, msg: "Transition   <br />  11:39 - 11:42" },
             { t: 1142, msg: "Advisory     <br />  11:42 - 12:14" },
-            { t: 1214, msg: "Lunch                    <br />  12:30 - 1:00" },
+            { t: 1214, msg: "Lunch                    <br />  12:14 - 1:00" },
             { t: 1300, msg: "Teacher's Conference     <br />  1:00 -  1:30" },
             { t: 1330, msg: "Teacher's PLC Period     <br />   1:30 -  4:00" },
             { t: 1600, msg: "School is out!" },
