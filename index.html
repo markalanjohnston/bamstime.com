@@ -24,7 +24,7 @@ function bellSchedule() {
   let schedTitle = "";
 
 if (todaysDate == 22621 || todaysDate == 31221 || todaysDate == 4921 || todaysDate == 42321 || todaysDate == 5721 || todaysDate == 52121 || todaysDate == 6421){
-      schedTitle = "This is Friday's 'A' bell schedule.";
+      schedTitle = "This is Friday's A bell schedule.";
       sched = [
         { t: 0, msg: "Friday A Schedule" },
         { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
@@ -45,29 +45,6 @@ if (todaysDate == 22621 || todaysDate == 31221 || todaysDate == 4921 || todaysDa
       ];
       let sl = sched.length;
     }
-    if (todaysDate == 21721){
-          schedTitle = "Spring Interim Testing schedule.";
-          sched = [
-            { t: 0, msg: "Testing schedule" },
-            { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
-            { t: 830, msg: "Students Report to 1st Period<br />8:30 -  8:35" },
-            { t: 835, msg: "Go to Advisory<br />Testing is scheduled to start at 8:45" },
-            { t: 845, msg: "Testing in Advisory<br /> Follow Teacher's Instructions" },
-            { t: 1215, msg: "7th Grade Lunch<br />8th Grade Advisory<br />  12:15 - 12:45" },
-            { t: 1245, msg: "7th Grade Advisory<br />8th Grade Lunch<br />  12:45 - 1:15" },
-            { t: 1315, msg: "Transition" },
-            { t: 1318, msg: "1st Period<br /> 1:18 - 1:55" },
-            { t: 1355, msg: "Transition" },
-            { t: 1358, msg: "2nd Period<br /> 1:58 - 2:35" },
-            { t: 1435, msg: "Transition" },
-            { t: 1438, msg: "3rd Period<br />2:38 - 3:15" },
-            { t: 1515, msg: "Transition" },
-            { t: 1518, msg: "4th Period<br /> 3:18 - 4:00" },
-            { t: 1600, msg: "School is out!" },
-            { t: 2400, msg: "clock will reset"},
-          ];
-          let sl = sched.length;
-        }
   else if (currentDayOfWeek == 5){
           schedTitle = "This is Friday's 'B' bell schedule.";
           sched = [
