@@ -23,51 +23,7 @@ function bellSchedule() {
   let sched = [];
   let schedTitle = "";
 
-if (todaysDate == 22621 || todaysDate == 31221 || todaysDate == 4921 || todaysDate == 42321 || todaysDate == 5721 || todaysDate == 52121 || todaysDate == 6421){
-      schedTitle = "This is Friday's A bell schedule.";
-      sched = [
-        { t: 0, msg: "Friday A Schedule" },
-        { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
-        { t: 830, msg: "1st Period    <br />	 8:30 -  9:15" },
-        { t: 915, msg: "Transition    <br />	 9:15 -  9:18" },
-        { t: 918, msg: "2nd Period    <br />   9:18 - 10:03" },
-        { t: 1003, msg: "Transition   <br />  10:03 - 10:06" },
-        { t: 1006, msg: "3rd Period   <br />  10:06 - 10:51" },
-        { t: 1051, msg: "Transition   <br />  10:51 - 10:54" },
-        { t: 1054, msg: "4th Period   <br />  10:54 - 11:39" },
-        { t: 1139, msg: "Transition   <br />  11:39 - 11:42" },
-        { t: 1142, msg: "Advisory     <br />  11:42 - 12:14" },
-        { t: 1214, msg: "Lunch                    <br />  12:30 - 1:00" },
-        { t: 1300, msg: "Teacher's Conference     <br />  1:00 -  1:30" },
-        { t: 1330, msg: "Teacher's PLC Period     <br />   1:30 -  4:00" },
-        { t: 1600, msg: "School is out!" },
-        { t: 2400, msg: "clock will reset"},
-      ];
-      let sl = sched.length;
-    }
-  else if (currentDayOfWeek == 5){
-          schedTitle = "This is Friday's 'B' bell schedule.";
-          sched = [
-            { t: 0, msg: "Friday B Schedule" },
-            { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
-            { t: 830, msg: "7th Period    <br />	 8:30 -  9:15" },
-            { t: 915, msg: "Transition    <br />	 9:15 -  9:18" },
-            { t: 918, msg: "8th Period    <br />   9:18 - 10:03" },
-            { t: 1003, msg: "Transition   <br />  10:03 - 10:06" },
-            { t: 1006, msg: "9th Period   <br />  10:06 - 10:51" },
-            { t: 1051, msg: "Transition   <br />  10:51 - 10:54" },
-            { t: 1054, msg: "10th Period   <br />  10:54 - 11:39" },
-            { t: 1139, msg: "Transition   <br />  11:39 - 11:42" },
-            { t: 1142, msg: "Advisory     <br />  11:42 - 12:14" },
-            { t: 1214, msg: "Lunch                    <br />  12:14 - 1:00" },
-            { t: 1300, msg: "Teacher's Conference     <br />  1:00 -  1:30" },
-            { t: 1330, msg: "Teacher's PLC Period     <br />   1:30 -  4:00" },
-            { t: 1600, msg: "School is out!" },
-            { t: 2400, msg: "clock will reset"},
-          ];
-          let sl = sched.length;
-        }
-  else if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
+if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
     schedTitle = "It's the WEEKEND! Enjoy!";
     sched = [
       { t: 0, msg: "School is out!" },
@@ -77,7 +33,7 @@ if (todaysDate == 22621 || todaysDate == 31221 || todaysDate == 4921 || todaysDa
     let sl = sched.length;
   }
   else {
-    schedTitle = "This is the REGULAR bell schedule for M-Th.";
+    schedTitle = "Bell Schedule";
     sched = [
       { t: 0, msg: "8:15<br />	First Bell" },
       { t: 815, msg: "Breakfast     <br />   8:15 -  8:30" },
@@ -103,11 +59,11 @@ if (todaysDate == 22621 || todaysDate == 31221 || todaysDate == 4921 || todaysDa
       { t: 1601, msg: "School is out!" },
       { t: 2400, msg: "clock will reset"},
     ];
+    let sl = sched.length;
   }
 
   document.getElementById("schedTitle").innerHTML = schedTitle;
-
-  let sl = sched.length;
+  
   for (let i = 0; i < sl; i++) {
     if (currentTimeIndex >= sched[i].t) {
       currentMessage = sched[i].msg;
