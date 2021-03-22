@@ -64,6 +64,7 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
 
   document.getElementById("schedTitle").innerHTML = schedTitle;
   
+  let sl = sched.length;
   for (let i = 0; i < sl; i++) {
     if (currentTimeIndex >= sched[i].t) {
       currentMessage = sched[i].msg;
