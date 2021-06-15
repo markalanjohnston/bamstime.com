@@ -71,6 +71,9 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
     countDown = countDown - 1;
     document.getElementById("countdown").innerHTML = "<span style='color:red'>" + countDown + ":" + (countDownSeconds<10?'0':'') + countDownSeconds;
   }
+  else if(countDown > 60) {
+    document.getElementById("countdown").innerHTML =  math.floor(countDown/60) + "<span style='color:#0044aa'> hrs </style>" +  countDown%60 + "<span style='color:#0044aa'> mins </style>";
+  }
   else {
     document.getElementById("countdown").innerHTML =  "<span style='color:#0044aa'>Minutes Remaining: </style>" + countDown;
   }
